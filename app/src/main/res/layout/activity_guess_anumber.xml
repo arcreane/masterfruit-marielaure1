@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".GuessANumberActivity">
+
+    <RadioGroup
+        android:id="@+id/difficultyRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/radioEasy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facile" />
+
+        <RadioButton
+            android:id="@+id/radioMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moyen" />
+
+        <RadioButton
+            android:id="@+id/radioHard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Difficile" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Démarrer" />
+
+    <EditText
+        android:id="@+id/numberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/validateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valider"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="0"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/attemptsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tentatives: 0/10"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/changeDifficultyCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Changer de difficulté"
+        android:visibility="gone" />
+
+</LinearLayout>
